@@ -15380,8 +15380,8 @@ if ("undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__) {
         (injectedHook = hook$jscomp$inline_2152);
     } catch (err) {}
 }
-if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
-  throw Error(formatProdErrorMessage(320));
+// if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
+//   throw Error(formatProdErrorMessage(320));
 exports.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE =
   Internals;
 exports.createPortal = function (children, container) {

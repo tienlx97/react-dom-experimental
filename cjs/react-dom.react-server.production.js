@@ -15491,10 +15491,10 @@ if ("undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__) {
         (injectedHook = hook$jscomp$inline_2134);
     } catch (err) {}
 }
-if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
-  throw Error(
-    "Expected ReactFiberErrorDialog.showErrorDialog to be a function."
-  );
+// if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
+//   throw Error(
+//     "Expected ReactFiberErrorDialog.showErrorDialog to be a function."
+//   );
 var ReactDOMSharedInternals$1 = Internals;
 function getCrossOriginStringAs(as, input) {
   if ("font" === as) return "";

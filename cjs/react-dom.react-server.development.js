@@ -25036,10 +25036,10 @@
           "font-weight:bold"
         );
     }
-    if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
-      throw Error(
-        "Expected ReactFiberErrorDialog.showErrorDialog to be a function."
-      );
+    // if ("function" !== typeof require("ReactFiberErrorDialog").showErrorDialog)
+    //   throw Error(
+    //     "Expected ReactFiberErrorDialog.showErrorDialog to be a function."
+    //   );
     var ReactDOMSharedInternals$1 = Internals;
     exports.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE =
       Internals;
