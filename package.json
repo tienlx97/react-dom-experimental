@@ -17,10 +17,10 @@
   },
   "homepage": "https://react.dev/",
   "dependencies": {
-    "scheduler": "0.25.0-rc-7aa5dda3-20241114"
+    "scheduler": "0.25.0"
   },
   "peerDependencies": {
-    "react": "19.0.0-rc-7aa5dda3-20241114"
+    "react": "git://github.com/tienlx97/react-experimental.git#www19"
   },
   "files": [
     "LICENSE",
