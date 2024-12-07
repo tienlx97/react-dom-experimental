@@ -1,7 +1,7 @@
 {
   "name": "react-dom",
-  "version": "19.0.0",
-  "description": "React DOM FB experimental",
+  "version": "19.0.0-rc-7aa5dda3-20241114",
+  "description": "React package for working with the DOM.",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -17,11 +17,10 @@
   },
   "homepage": "https://react.dev/",
   "dependencies": {
-    "loose-envify": "1.4.0",
-    "scheduler": "0.25.0"
+    "scheduler": "0.25.0-rc-7aa5dda3-20241114"
   },
   "peerDependencies": {
-    "react": "git://github.com/tienlx97/react-experimental.git#www19"
+    "react": "19.0.0-rc-7aa5dda3-20241114"
   },
   "files": [
     "LICENSE",
