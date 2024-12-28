@@ -1,6 +1,6 @@
 {
   "name": "react-dom",
-  "version": "19.0.0-rc-7aa5dda3-20241114",
+  "version": "19.1.0-www-classic-de82912e-20241220",
   "description": "React package for working with the DOM.",
   "main": "index.js",
   "repository": {
@@ -20,7 +20,7 @@
     "scheduler": "0.25.0"
   },
   "peerDependencies": {
-    "react": "git://github.com/tienlx97/react-experimental.git#www19"
+    "react": "git://github.com/tienlx97/react-experimental.git#facebook-www"
   },
   "files": [
     "LICENSE",
