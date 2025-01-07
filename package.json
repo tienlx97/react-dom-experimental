@@ -1,6 +1,6 @@
 {
   "name": "react-dom",
-  "version": "19.1.0-www-classic-de82912e-20241220",
+  "version": "19.1.0-canary-33141625-20250106",
   "description": "React package for working with the DOM.",
   "main": "index.js",
   "repository": {
