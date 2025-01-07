@@ -17,10 +17,10 @@
   },
   "homepage": "https://react.dev/",
   "dependencies": {
-    "scheduler": "0.25.0"
+    "scheduler": "0.26.0-canary-33141625-20250106"
   },
   "peerDependencies": {
-    "react": "git://github.com/tienlx97/react-experimental.git#www19"
+    "react": "19.1.0-canary-33141625-20250106"
   },
   "files": [
     "LICENSE",
