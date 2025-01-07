@@ -17,7 +17,7 @@
   },
   "homepage": "https://react.dev/",
   "dependencies": {
-    "scheduler": "0.26.0-canary-33141625-20250106"
+    "scheduler": "0.5.0"
   },
   "peerDependencies": {
     "react": "19.1.0-canary-33141625-20250106"
