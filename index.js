@@ -1,38 +1,55 @@
-'use strict';
+/* eslint-disable no-eq-null */
+import ReactDOMProfiling from "./ReactDOM-profiling.classic"
+import ReactDOMCompatibilityLayer from "./ReactDOMCompatibilityLayer"
 
-function checkDCE() {
-  /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */
-  if (
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' ||
-    typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function'
-  ) {
-    return;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    // This branch is unreachable because this function is only called
-    // in production, but the condition is true only in development.
-    // Therefore if the branch is still here, dead code elimination wasn't
-    // properly applied.
-    // Don't change the message. React DevTools relies on it. Also make sure
-    // this message doesn't occur elsewhere in this function, or it will cause
-    // a false positive.
-    throw new Error('^_^');
-  }
-  try {
-    // Verify that the code above has been dead code eliminated (DCE'd).
-    __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(checkDCE);
-  } catch (err) {
-    // DevTools shouldn't crash React, no matter what.
-    // We should still report in case we break this code.
-    console.error(err);
-  }
+
+// b("setupReactRefresh");
+// b("consolePatchForReact");
+function a() {
+  throw Error("This React API is not available on Workplace.")
 }
 
-if (process.env.NODE_ENV === 'production') {
-  // DCE check should happen before ReactDOM bundle executes so that
-  // DevTools can report bad minification during injection.
-  checkDCE();
-  module.exports = require('./cjs/react-dom.production.min.js');
-} else {
-  module.exports = require('./cjs/react-dom.development.js');
+let e = ReactDOMProfiling.createPortal;
+
+function d(a, c, d) {
+  return ReactDOMProfiling.hydrateRoot(a, c, {onRecoverableError: function(a) {
+    if (a != null && typeof a.message === "string") {
+      let b = a.message;
+      if (b.indexOf("The server could not finish this Suspense boundary") !== -1 || b.indexOf("Minified React error #419;") !== -1 || b.indexOf("This Suspense boundary received an update") !== -1 || b.indexOf("Minified React error #421;") !== -1)
+        return
+    }
+    typeof reportError === "function" && reportError(a)
+  }, ...d})
+}
+
+export const createPortal = e;
+export const createRoot = ReactDOMProfiling.createRoot;
+export const hydrateRoot = d;
+export const flushSync = ReactDOMProfiling.flushSync;
+export const useFormStatus = ReactDOMProfiling.useFormStatus;
+export const useFormState = ReactDOMProfiling.useFormState;
+export const version = ReactDOMProfiling.version;
+export const __DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = ReactDOMProfiling.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+export const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOMProfiling?.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED ?? null;
+export const unstable_batchedUpdates = ReactDOMProfiling.unstable_batchedUpdates;
+export const unstable_createEventHandle = ReactDOMProfiling.unstable_createEventHandle;
+export const findDOMNode = ReactDOMProfiling.findDOMNode;
+export const render = ReactDOMCompatibilityLayer.render_DEPRECATED;
+export const unmountComponentAtNode = ReactDOMCompatibilityLayer.unmountComponentAtNode_DEPRECATED
+
+export default {
+  createPortal,
+  createRoot ,
+  hydrateRoot ,
+  flushSync ,
+  useFormStatus,
+  useFormState ,
+  version ,
+  __DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE ,
+  __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,
+  unstable_batchedUpdates,
+  unstable_createEventHandle,
+  findDOMNode,
+  render,
+  unmountComponentAtNode,
 }
