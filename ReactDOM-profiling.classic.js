@@ -21966,7 +21966,7 @@ ReactDOMHydrationRoot.prototype.unstable_scheduleHydration = function (target) {
     0 === i && attemptExplicitHydrationTarget(target);
   }
 };
-var ReactFiberErrorDialogWWW = require("./ReactFiberErrorDialog");
+var {ReactFiberErrorDialog: ReactFiberErrorDialogWWW} = require("./ReactFiberErrorDialog");
 if ("function" !== typeof ReactFiberErrorDialogWWW.showErrorDialog)
   throw Error(formatProdErrorMessage(320));
 function wwwOnUncaughtError(error, errorInfo) {
