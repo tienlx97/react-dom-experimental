@@ -16362,7 +16362,7 @@ if (canUseDOM)
   } catch (e) {
     passiveBrowserEventsSupported = !1;
   }
-var EventListenerWWW = require("./EventListener"),
+var {CometEventListener: EventListenerWWW} = require("./EventListener"),
   root = null,
   startText = null,
   fallbackText = null;
